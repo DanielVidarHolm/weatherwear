@@ -2,10 +2,7 @@ from requests import Request, Session
 from requests.exceptions import TooManyRedirects, Timeout, ConnectionError
 import json
 import os
-
-                     
-
-# CORDINATES
+os.environ['REQUESTS_CA_BUNDLE'] = "certifi/cacert.pem"
 
 def getWeatherData(cord):
     url = "http://api.openweathermap.org/data/2.5/forecast"
